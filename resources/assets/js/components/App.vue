@@ -1,13 +1,18 @@
 <template>
     <div class="app">
-        <el-button @click="visible = true">Button</el-button>
-        <el-dialog :visible.sync="visible" title="Hello world">
-            <p>Try Element UI!</p>
-        </el-dialog>
+        <el-container>
+            <el-header> <Navbar/> </el-header>
+            <el-container>
+                <el-aside width="200px"> <Sidemenu/> </el-aside>
+                <el-main>Main</el-main>
+            </el-container>
+        </el-container>
     </div>
 </template>
 
 <script>
+    import Navbar from './Navbar.vue'
+
     export default {
         data () {
             return { 
@@ -19,3 +24,9 @@
         }
     }
 </script>
+
+<style scoped>
+    .el-header {
+        padding: 0;
+    }
+</style>
