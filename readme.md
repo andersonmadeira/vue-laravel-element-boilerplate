@@ -4,11 +4,11 @@
 
 This is intended to be a modern boilerplate for web apps. It features a custom webpack setup built from scratch having simplicity in mind. If you love VueJS and Laravel and you need an small but eficient boilerplate to quickly start your brand new app, you're in the right place.
 
-#### Dependencies
+### Dependencies
 
 Some major dependencies are listed below:
 
-##### Back end:
+#### Back end:
 
 | Name | Version |
 | ------ | ----- |
@@ -16,10 +16,10 @@ Some major dependencies are listed below:
 | MySQL | Ver 14.14 Distrib 5.5.46 |
 | Lavavel | 5.4 |
 
-##### Front end
+#### Front end
 
 | Name | Version |
-| ------ | ----- | ----- |
+| ------ | ----- |
 | Node | >= 8.x |
 | Vue | >= 2.x |
 | Webpack | >= 4.x |
@@ -27,7 +27,7 @@ Some major dependencies are listed below:
 
 For more dependencies please check composer.json (back) and package.json (front)
 
-## Installation
+### Installation
 
 Clone the repo
 
@@ -49,7 +49,7 @@ Clone the repo
 2. On the `.env` file, set your api url (aka the url where your backend is located). In some setups this may be equal to your APP_URL:
   - `API_URL=http://localhost:8080/`
 
-## Development
+### Development
 
 #### Back end
 
@@ -67,7 +67,7 @@ Just run:
 
 This will give you a fresh webpack dev server with hot reload enabled
 
-## Testing
+### Testing
 
 #### Back end
 
@@ -75,7 +75,11 @@ You can define unit and feature test with artisan and then run all them with:
 
 `vendor\bin\phpunit`
 
-## Deploy
+#### Front end
+
+Not available yet, but you can do it yourself.
+
+### Deploy
 
 To deploy your app just do all the steps already known for the front, and then build the front to the public folder with:
 
