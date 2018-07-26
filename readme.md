@@ -1,51 +1,82 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# vue-laravel-element-boilerplate
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+### Before you dive into
 
-## About Laravel
+This is intended to be a modern boilerplate for web apps. It features a custom webpack setup built from scratch having simplicity in mind. If you love VueJS and Laravel and you need an small but eficient boilerplate to quickly start your brand new app, you're in the right place.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+#### Dependencies
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Some major dependencies are listed below:
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+##### Back end:
 
-## Learning Laravel
+| Name | Version |
+| ------ | ----- |
+| PHP | >= 5.6.30 |
+| MySQL | Ver 14.14 Distrib 5.5.46 |
+| Lavavel | 5.4 |
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+##### Front end
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+| Name | Version |
+| ------ | ----- | ----- |
+| Node | >= 8.x |
+| Vue | >= 2.x |
+| Webpack | >= 4.x |
+| Babel | >= 6.x |
 
-## Laravel Sponsors
+For more dependencies please check composer.json (back) and package.json (front)
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+## Installation
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+Clone the repo
 
-## Contributing
+#### Back end
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+1. Install all deps with:
+   - `composer install`
+2. Copy `.env.example` to `.env`:
+   - `php -r "file_exists('.env') || copy('.env.example', '.env');"`
+3. Update `.env` vars
+   - `vim .env`
+4. Generate the app key:
+   - `php artisan key:generate`
 
-## Security Vulnerabilities
+#### Front end
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+1. Install deps:
+  - `npm install`
+2. On the `.env` file, set your api url (aka the url where your backend is located). In some setups this may be equal to your APP_URL:
+  - `API_URL=http://localhost:8080/`
 
-## License
+## Development
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+#### Back end
+
+To run your api app just serve your app:
+
+`php artisan serve`
+
+Save the url you'll get for later.
+
+#### Front end
+
+Just run:
+
+`npm run dev`
+
+This will give you a fresh webpack dev server with hot reload enabled
+
+## Testing
+
+#### Back end
+
+You can define unit and feature test with artisan and then run all them with:
+
+`vendor\bin\phpunit`
+
+## Deploy
+
+To deploy your app just do all the steps already known for the front, and then build the front to the public folder with:
+
+`npm run build`
