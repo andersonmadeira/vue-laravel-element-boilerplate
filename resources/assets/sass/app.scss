@@ -1,9 +1,17 @@
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// // Variables
+// @import "variables";
+//
+// // Bootstrap
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-// Variables
-@import "variables";
+// Import your favourite font
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// and assign it to your body
+body {
+  font-family: 'Open Sans';
+}
+
+// Import element ui sass
+@import '~element-ui/packages/theme-chalk/src/index';
