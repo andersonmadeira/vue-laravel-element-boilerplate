@@ -36,7 +36,7 @@ Clone the repo
 1. Install all deps with:
    - `composer install`
 2. Copy `.env.example` to `.env`:
-   - `php -r "file_exists('.env') || copy('.env.example', '.env');"`
+   - `cp .env.example .env`
 3. Update `.env` vars
    - `vim .env`
 4. Generate the app key:
